@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import Grid from './Grid';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return(
@@ -72,6 +73,7 @@ function App () {
         ))}
         <TodoForm addTodo={addTodo} />
       </div>
+    <Grid />
     </div>
   )
 }
