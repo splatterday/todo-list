@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
+.app {
+    background: #4AC29A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #BDFFF3, #4AC29A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #BDFFF3, #4AC29A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 30px;
+    height: 100vh;
+}
+
+.todo-list {
+    background: #e8e8e8;
+    border-radius: 4px;
+    padding: 1em;
+    max-width: 400px;
+    margin: 0 auto;
+    h1 {
+        color: pink;
+        font-family: Sacramento;
+        text-align: center;
+    }
+}
+
+.todo {
+    background: #fff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    padding: 3px 10px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form {
+    margin: 1em;
+}
+
+input.input {
+    height: 2em;
+    width: 26em;
+    padding: .5em;
+}
+
+button {
+    background-color: whitesmoke;
+    border-style: none;
+    border-radius: 1em;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid grey;
+}

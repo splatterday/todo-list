@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
-import Grid from './Grid';
+import './App.scss';
 
 function Todo({ todo, index, completeTodo, removeTodo }) {
   return(
@@ -27,25 +26,13 @@ function TodoForm({addTodo}) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" className="input" value={value} placeholder="add new to do" onChange={e => setValue(e.target.value)} />
+      <input type="text" className="input" value={value} placeholder="What's on the agenda?" onChange={e => setValue(e.target.value)} />
     </form>
   )
 }
 
 function App () {
   const [todos, setTodos] = useState([
-    {
-      text: 'Learn About React',
-      isCompleted: false
-    },
-    {
-      text: 'Destroy my enemies',
-      isCompleted: false
-    },
-    {
-      text: 'Kill myself',
-      isCompleted: false
-    }
   ]);
 
   const addTodo = text => {
@@ -68,12 +55,12 @@ function App () {
   return (
     <div className="app">
       <div className="todo-list">
+      <h1>React To-Do List</h1>
+        <TodoForm addTodo={addTodo} />
         {todos.map((todo,index) => (
           <Todo key={index} index={index} todo={todo} completeTodo={completeTodo} removeTodo={removeTodo}/>
         ))}
-        <TodoForm addTodo={addTodo} />
       </div>
-    <Grid />
     </div>
   )
 }
